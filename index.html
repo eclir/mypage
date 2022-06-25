@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="주수연 - 프로필 링크">
+    <meta property="og:description" content="2022 개발자는 처음이라.">
+    <meta property="og:image" content="캐릭터.jpg">
+    <script type="text/javascript" src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/free/sparta.js"></script>
+    <title>르탄이 - 프로필 링크</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        * {
+            font-family: "Pretendard",serif;
+        } /*글꼴 넣어줬음*/
+
+        body{
+            background-color: #44398a;
+        }
+        .profile {
+            width: 100px;
+            height: 100px;
+
+            border-radius: 100%;
+
+            border : 2px solid white; /*경계선 설정*/
+           
+
+            background-image: url('캐릭터.jpg'); /*사진은 보통 이 세 줄이 같이 다닌다*/
+            background-position: center;
+            background-size: cover;
+        }
+        .main{
+            color: white;
+            font-size: 20px;
+
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        .sub{
+            color: white;
+            font-size: 14px;
+
+            margin-top: 0px;
+            margin-bottom: 30px;
+        }
+        .wrap{
+            /*보통 편집 때 가시성을 위해 배경색을 지정함. 그리고 없앰. background-color :*/
+            
+            width: 300px; /*그룹 크기를 줄인 다음 양쪽 여백을 만들 계획*/
+            margin: 30px auto 0px auto; /*차례대로 위 오른쪽 아래 왼쪽(시계방향)에 여백을 줌*/
+
+            /*현재 그룹이 블럭으로 묶여있는 상태이고 블럭을 기준으로 여백을 주었는데,
+            블럭 내에서 가운데로 맞추려고 함. 이를 display-flex를 활용한다.(내용물을 가운데로)*/
+            display: flex;
+            flex-direction: column; /*보통 column이냐 logo냐를 바꿔씀*/
+            justify-content: center;
+            align-items: center;
+        }
+        .wrap > a {/* > 는 warp으로 이름붙인 div안에 모든 a 태그에 적용해줘 라는 의미*/
+            width: 300px;
+            height: 50px;
+
+            background-color: white;
+            border-radius: 8px;
+
+            margin-bottom: 10px; /*사이 간격 조정*/
+
+            font-size: 14px;
+            font-weight: bold;
+            color: #44398a;
+
+            /*내용물을 가운데로*/
+            display: flex;
+            flex-direction: column; /*보통 column이냐 logo냐를 바꿔씀*/
+            justify-content: center;
+            align-items: center;
+
+            text-decoration: none; /*a 태그에 자동으로 들어가는 밑줄을 없애줌*/
+
+            box-shadow: 3px 3px 5px 0px black;/*그림자넣기. 차례대로 2개: 오른쪽 밑으로 얼마나, 꼬리의 길이, 꼬리의 선명도*/
+        }
+        .wrap > a:hover { /* a를 hover했을 때 어떻게 될 거냐에 대한 정의*/
+            background-color: #f2f2f2; /*약한 회색. 즉 마우스를 그 박스 위에 올리면 그 박스가 흰색-> 회색으로 변함.*/
+            /*여기서 font-size를 정의하면 마우스를 올렸을 때 폰트 사이즈를 바뀌게 보이게 할 수 있음.*/
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap"> <!-- 사진과 글씨들을 가운데로 옮기기 위해선 그룹화하여 옯겨야 할 필요가 있다. 묶는 div 태그를 사용한다.-->
+        <div class="profile"></div>
+        <h1 class="main">주수연</h1>
+        <p class="sub">꿈꾸는 초보개발자. 매일 나아가는 중입니다.</p>
+        <a target="_blank" href="https://blog.naver.com/zpiyh05">블로그</a>
+        <a target="_blank" href="https://www.instagram.com/jus__yeon/">인스타그램</a>
+    </div>
+    
+</body>
+</html>
+
+<!--여러 단락을 잡은 다음 tab눌러주면 한 번에 줄글들이 tab처리 된다.-->
